@@ -46,7 +46,8 @@
     "xcoverage": "gulp coverage",
     "xpub": "npm run build && npm publish",
     "xtest": "gulp test",
-    "xtest:ci": "npm run test"
+    "xtest:ci": "npm run test",
+    "prepublishOnly": "rm -rf ./dist && rm -f package-lock.json && npm install --also=dev"
   },
   "files": [
     "lib",
