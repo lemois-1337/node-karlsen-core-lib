@@ -1,6 +1,6 @@
 # Transaction
 
-Kaspacore provides a very simple API for creating transactions. We expect this API to be accessible for developers without knowing the working internals of bitcoin in deep detail. What follows is a small introduction to transactions with some basic knowledge required to use this API.
+Karlsencore provides a very simple API for creating transactions. We expect this API to be accessible for developers without knowing the working internals of bitcoin in deep detail. What follows is a small introduction to transactions with some basic knowledge required to use this API.
 
 A Transaction contains a set of inputs and a set of outputs. Each input contains a reference to another transaction's output, and a signature that allows the value referenced in that output to be used in this transaction.
 
@@ -78,9 +78,9 @@ transaction.applySignature(receivedSig);
 
 ## Adding inputs
 
-Transaction inputs are instances of either [Input](https://github.com/bitpay/bitcore/tree/master/packages/kaspacore-lib/lib/transaction/input) or its subclasses. `Input` has some abstract methods, as there is no actual concept of a "signed input" in the bitcoin scripting system (just valid signatures for `OP_CHECKSIG` and similar opcodes). They are stored in the `input` property of `Transaction` instances.
+Transaction inputs are instances of either [Input](https://github.com/bitpay/bitcore/tree/master/packages/karlsencore-lib/lib/transaction/input) or its subclasses. `Input` has some abstract methods, as there is no actual concept of a "signed input" in the bitcoin scripting system (just valid signatures for `OP_CHECKSIG` and similar opcodes). They are stored in the `input` property of `Transaction` instances.
 
-Kaspacore contains two implementations of `Input`, one for spending _Pay to Public Key Hash_ outputs (called `PublicKeyHashInput`) and another to spend _Pay to Script Hash_ outputs for which the redeem script is a Multisig script (called `MultisigScriptHashInput`).
+Karlsencore contains two implementations of `Input`, one for spending _Pay to Public Key Hash_ outputs (called `PublicKeyHashInput`) and another to spend _Pay to Script Hash_ outputs for which the redeem script is a Multisig script (called `MultisigScriptHashInput`).
 
 All inputs have the following five properties:
 
@@ -95,7 +95,7 @@ Both `PublicKeyHashInput` and `MultisigScriptHashInput` cache the information ab
 Some methods related to adding inputs are:
 
 - `from`: A high level interface to add an input from a UTXO. It has a series of variants:
-  - `from(utxo)`: add an input from an [Unspent Transaction Output](http://kaspacore.io/guide/unspentoutput.html). Currently, only P2PKH outputs are supported.
+  - `from(utxo)`: add an input from an [Unspent Transaction Output](http://karlsencore.io/guide/unspentoutput.html). Currently, only P2PKH outputs are supported.
   - `from(utxos)`: same as above, but passing in an array of Unspent Outputs.
   - `from(utxo, publicKeys, threshold)`: add an input that spends a UTXO with a P2SH output for a Multisig script. The `publicKeys` argument is an array of public keys, and `threshold` is the number of required signatures in the Multisig script.
 

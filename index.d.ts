@@ -1,4 +1,4 @@
-declare module '@kaspa/core-lib' {
+declare module '@karlsen/core-lib' {
 
 	function initRuntime(): Promise;
 	function setDebugLevel(level:number):void;

@@ -4,8 +4,8 @@ var _ = require('lodash');
 var chai = require('chai');
 var expect = chai.expect;
 
-var kaspacore = require('../..');
-var UnspentOutput = kaspacore.Transaction.UnspentOutput;
+var karlsencore = require('../..');
+var UnspentOutput = karlsencore.Transaction.UnspentOutput;
 
 describe('UnspentOutput', function() {
 

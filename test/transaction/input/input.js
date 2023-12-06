@@ -4,13 +4,13 @@ var should = require('chai').should();
 var expect = require('chai').expect;
 var _ = require('lodash');
 
-var kaspacore = require('../../..');
-var errors = kaspacore.errors;
-var PrivateKey = kaspacore.PrivateKey;
-var Address = kaspacore.Address;
-var Script = kaspacore.Script;
-var Networks = kaspacore.Networks;
-var Input = kaspacore.Transaction.Input;
+var karlsencore = require('../../..');
+var errors = karlsencore.errors;
+var PrivateKey = karlsencore.PrivateKey;
+var Address = karlsencore.Address;
+var Script = karlsencore.Script;
+var Networks = karlsencore.Networks;
+var Input = karlsencore.Transaction.Input;
 
 describe('Transaction.Input', function() {
 

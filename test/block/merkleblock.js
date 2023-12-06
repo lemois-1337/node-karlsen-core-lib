@@ -2,11 +2,11 @@
 
 var should = require('chai').should();
 
-var kaspacore = require('../..');
-var MerkleBlock = kaspacore.MerkleBlock;
-var BufferReader = kaspacore.encoding.BufferReader;
-var BufferWriter = kaspacore.encoding.BufferWriter;
-var Transaction = kaspacore.Transaction;
+var karlsencore = require('../..');
+var MerkleBlock = karlsencore.MerkleBlock;
+var BufferReader = karlsencore.encoding.BufferReader;
+var BufferWriter = karlsencore.encoding.BufferWriter;
+var Transaction = karlsencore.Transaction;
 var data = require('../data/merkleblocks.js');
 var transactionVector = require('../data/tx_creation');
 

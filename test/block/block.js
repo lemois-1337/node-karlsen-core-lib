@@ -1,15 +1,15 @@
 'use strict';
 
-var kaspacore = require('../..');
+var karlsencore = require('../..');
 var BN = require('../../lib/crypto/bn');
-var BufferReader = kaspacore.encoding.BufferReader;
-var BufferWriter = kaspacore.encoding.BufferWriter;
-var BlockHeader = kaspacore.BlockHeader;
-var Block = kaspacore.Block;
+var BufferReader = karlsencore.encoding.BufferReader;
+var BufferWriter = karlsencore.encoding.BufferWriter;
+var BlockHeader = karlsencore.BlockHeader;
+var Block = karlsencore.Block;
 var chai = require('chai');
 var fs = require('fs');
 var should = chai.should();
-var Transaction = kaspacore.Transaction;
+var Transaction = karlsencore.Transaction;
 
 // https://test-insight.bitpay.com/block/000000000b99b16390660d79fcc138d2ad0c89a0d044c4201a02bdf1f61ffa11
 var dataRawBlockBuffer = fs.readFileSync('test/data/blk86756-testnet.dat');

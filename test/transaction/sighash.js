@@ -4,11 +4,11 @@ var buffer = require('buffer');
 
 var chai = require('chai');
 var should = chai.should();
-var kaspacore = require('../../');
-var Script = kaspacore.Script;
-var BN = kaspacore.crypto.BN;
-var Transaction = kaspacore.Transaction;
-var Signature = kaspacore.crypto.Signature;
+var karlsencore = require('../../');
+var Script = karlsencore.Script;
+var BN = karlsencore.crypto.BN;
+var Transaction = karlsencore.Transaction;
+var Signature = karlsencore.crypto.Signature;
 var sighash = Transaction.sighash;
 
 var vectors_sighash = require('../data/sighash.json');

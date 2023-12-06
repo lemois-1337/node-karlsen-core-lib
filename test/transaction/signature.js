@@ -6,12 +6,12 @@ var should = require('chai').should();
 var expect = require('chai').expect;
 var _ = require('lodash');
 
-var kaspacore = require('../..');
-var Transaction = kaspacore.Transaction;
-var TransactionSignature = kaspacore.Transaction.Signature;
-var Script = kaspacore.Script;
-var PrivateKey = kaspacore.PrivateKey;
-var errors = kaspacore.errors;
+var karlsencore = require('../..');
+var Transaction = karlsencore.Transaction;
+var TransactionSignature = karlsencore.Transaction.Signature;
+var Script = karlsencore.Script;
+var PrivateKey = karlsencore.PrivateKey;
+var errors = karlsencore.errors;
 
 describe('TransactionSignature', function() {
 

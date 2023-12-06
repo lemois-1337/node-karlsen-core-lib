@@ -1,7 +1,7 @@
 'use strict';
 
-var kaspacore = require('../..');
-var Random = kaspacore.crypto.Random;
+var karlsencore = require('../..');
+var Random = karlsencore.crypto.Random;
 
 describe('Random', function() {
 

@@ -4,26 +4,26 @@
 const secp256k1 = require('secp256k1-wasm');
 const blake2b = require('blake2b-wasm');
 
-var kaspacore = module.exports;
+var karlsencore = module.exports;
 
-kaspacore.secp256k1 = secp256k1;
+karlsencore.secp256k1 = secp256k1;
 
 // module information
-kaspacore.version = 'v' + require('./package.json').version;
-kaspacore.versionGuard = function(version) {
+karlsencore.version = 'v' + require('./package.json').version;
+karlsencore.versionGuard = function(version) {
 	if (version !== undefined) {
-		var message = 'More than one instance of kaspacore-lib found. ' +
-			'Please make sure to require kaspacore-lib and check that submodules do' +
-			' not also include their own kaspacore-lib dependency.';
+		var message = 'More than one instance of karlsencore-lib found. ' +
+			'Please make sure to require karlsencore-lib and check that submodules do' +
+			' not also include their own karlsencore-lib dependency.';
 		throw new Error(message);
 	}
 };
-kaspacore.versionGuard(global._kaspacoreLibVersion);
-global._kaspacoreLibVersion = kaspacore.version;
+karlsencore.versionGuard(global._karlsencoreLibVersion);
+global._karlsencoreLibVersion = karlsencore.version;
 
 
 const wasmModulesLoadStatus = new Map();
-kaspacore.wasmModulesLoadStatus = wasmModulesLoadStatus;
+karlsencore.wasmModulesLoadStatus = wasmModulesLoadStatus;
 wasmModulesLoadStatus.set("blake2b", false);
 wasmModulesLoadStatus.set("secp256k1", false);
 
@@ -38,7 +38,7 @@ const setWasmLoadStatus = (mod, loaded) => {
 	})
 
 	if (allLoaded)
-		kaspacore.ready();
+		karlsencore.ready();
 }
 
 
@@ -66,69 +66,69 @@ const deferred = ()=>{
 }
 const readySignal = deferred();
 
-kaspacore.ready = ()=>{
+karlsencore.ready = ()=>{
 	readySignal.resolve(true);
 }
-kaspacore.initRuntime = ()=>{
+karlsencore.initRuntime = ()=>{
 	return readySignal;
 }
 
 
 // crypto
-kaspacore.crypto = {};
-kaspacore.crypto.BN = require('./lib/crypto/bn');
-kaspacore.crypto.ECDSA = require('./lib/crypto/ecdsa');
-kaspacore.crypto.Schnorr = require('./lib/crypto/schnorr');
-kaspacore.crypto.Hash = require('./lib/crypto/hash');
-kaspacore.crypto.Random = require('./lib/crypto/random');
-kaspacore.crypto.Point = require('./lib/crypto/point');
-kaspacore.crypto.Signature = require('./lib/crypto/signature');
+karlsencore.crypto = {};
+karlsencore.crypto.BN = require('./lib/crypto/bn');
+karlsencore.crypto.ECDSA = require('./lib/crypto/ecdsa');
+karlsencore.crypto.Schnorr = require('./lib/crypto/schnorr');
+karlsencore.crypto.Hash = require('./lib/crypto/hash');
+karlsencore.crypto.Random = require('./lib/crypto/random');
+karlsencore.crypto.Point = require('./lib/crypto/point');
+karlsencore.crypto.Signature = require('./lib/crypto/signature');
 
 // encoding
-kaspacore.encoding = {};
-kaspacore.encoding.Base58 = require('./lib/encoding/base58');
-kaspacore.encoding.Base58Check = require('./lib/encoding/base58check');
-kaspacore.encoding.BufferReader = require('./lib/encoding/bufferreader');
-kaspacore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
-kaspacore.encoding.Varint = require('./lib/encoding/varint');
+karlsencore.encoding = {};
+karlsencore.encoding.Base58 = require('./lib/encoding/base58');
+karlsencore.encoding.Base58Check = require('./lib/encoding/base58check');
+karlsencore.encoding.BufferReader = require('./lib/encoding/bufferreader');
+karlsencore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
+karlsencore.encoding.Varint = require('./lib/encoding/varint');
 
 // utilities
-kaspacore.util = {};
-kaspacore.util.buffer = require('./lib/util/buffer');
-kaspacore.util.js = require('./lib/util/js');
-kaspacore.util.preconditions = require('./lib/util/preconditions');
-kaspacore.util.base32 = require('./lib/util/base32');
-kaspacore.util.convertBits = require('./lib/util/convertBits');
-kaspacore.setDebugLevel = (level)=>{
-	kaspacore.util.js.debugLevel = level;
+karlsencore.util = {};
+karlsencore.util.buffer = require('./lib/util/buffer');
+karlsencore.util.js = require('./lib/util/js');
+karlsencore.util.preconditions = require('./lib/util/preconditions');
+karlsencore.util.base32 = require('./lib/util/base32');
+karlsencore.util.convertBits = require('./lib/util/convertBits');
+karlsencore.setDebugLevel = (level)=>{
+	karlsencore.util.js.debugLevel = level;
 }
 
 // errors thrown by the library
-kaspacore.errors = require('./lib/errors');
+karlsencore.errors = require('./lib/errors');
 
 // main bitcoin library
-kaspacore.Address = require('./lib/address');
-kaspacore.Block = require('./lib/block');
-kaspacore.MerkleBlock = require('./lib/block/merkleblock');
-kaspacore.BlockHeader = require('./lib/block/blockheader');
-kaspacore.HDPrivateKey = require('./lib/hdprivatekey.js');
-kaspacore.HDPublicKey = require('./lib/hdpublickey.js');
-kaspacore.Networks = require('./lib/networks');
-kaspacore.Opcode = require('./lib/opcode');
-kaspacore.PrivateKey = require('./lib/privatekey');
-kaspacore.PublicKey = require('./lib/publickey');
-kaspacore.Script = require('./lib/script');
-kaspacore.Transaction = require('./lib/transaction');
-kaspacore.URI = require('./lib/uri');
-kaspacore.Unit = require('./lib/unit');
+karlsencore.Address = require('./lib/address');
+karlsencore.Block = require('./lib/block');
+karlsencore.MerkleBlock = require('./lib/block/merkleblock');
+karlsencore.BlockHeader = require('./lib/block/blockheader');
+karlsencore.HDPrivateKey = require('./lib/hdprivatekey.js');
+karlsencore.HDPublicKey = require('./lib/hdpublickey.js');
+karlsencore.Networks = require('./lib/networks');
+karlsencore.Opcode = require('./lib/opcode');
+karlsencore.PrivateKey = require('./lib/privatekey');
+karlsencore.PublicKey = require('./lib/publickey');
+karlsencore.Script = require('./lib/script');
+karlsencore.Transaction = require('./lib/transaction');
+karlsencore.URI = require('./lib/uri');
+karlsencore.Unit = require('./lib/unit');
 
 // dependencies, subject to change
-kaspacore.deps = {};
-kaspacore.deps.bnjs = require('bn.js');
-kaspacore.deps.bs58 = require('bs58');
-kaspacore.deps.Buffer = Buffer;
-kaspacore.deps.elliptic = require('elliptic');
-kaspacore.deps._ = require('lodash');
+karlsencore.deps = {};
+karlsencore.deps.bnjs = require('bn.js');
+karlsencore.deps.bs58 = require('bs58');
+karlsencore.deps.Buffer = Buffer;
+karlsencore.deps.elliptic = require('elliptic');
+karlsencore.deps._ = require('lodash');
 
 // Internal usage, exposed for testing/advanced tweaking
-kaspacore.Transaction.sighash = require('./lib/transaction/sighash');
+karlsencore.Transaction.sighash = require('./lib/transaction/sighash');

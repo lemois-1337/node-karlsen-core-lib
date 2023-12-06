@@ -4,8 +4,8 @@
 var should = require('chai').should();
 var expect = require('chai').expect;
 
-var kaspacore = require('../..');
-var JSUtil = kaspacore.util.js;
+var karlsencore = require('../..');
+var JSUtil = karlsencore.util.js;
 
 describe('js utils', function() {
 

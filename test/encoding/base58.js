@@ -1,9 +1,9 @@
 'use strict';
 
 var should = require('chai').should();
-var kaspacore = require('../..');
+var karlsencore = require('../..');
 var buffer = require('buffer');
-var Base58 = kaspacore.encoding.Base58;
+var Base58 = karlsencore.encoding.Base58;
 
 describe('Base58', function() {
   var buf = Buffer.from([0, 1, 2, 3, 253, 254, 255]);

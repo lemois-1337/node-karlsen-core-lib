@@ -2,8 +2,8 @@
 
 var expect = require('chai').expect;
 var should = require('chai').should();
-var kaspacore = require('..');
-var convertBits = kaspacore.util.convertBits;
+var karlsencore = require('..');
+var convertBits = karlsencore.util.convertBits;
 
 describe('convertBits', function() {
 

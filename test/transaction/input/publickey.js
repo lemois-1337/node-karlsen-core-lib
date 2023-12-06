@@ -3,9 +3,9 @@
 var should = require('chai').should();
 var expect = require('chai').expect;
 
-var kaspacore = require('../../..');
-var Transaction = kaspacore.Transaction;
-var PrivateKey = kaspacore.PrivateKey;
+var karlsencore = require('../../..');
+var Transaction = karlsencore.Transaction;
+var PrivateKey = karlsencore.PrivateKey;
 
 describe('PublicKeyInput', function() {
 

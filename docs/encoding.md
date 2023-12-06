@@ -1,6 +1,6 @@
 # Encoding
 
-The `kaspacore.Encoding` namespace contains utilities for encoding information in common formats in the bitcoin ecosystem.
+The `karlsencore.Encoding` namespace contains utilities for encoding information in common formats in the bitcoin ecosystem.
 
 ## Base58 & Base58Check
 

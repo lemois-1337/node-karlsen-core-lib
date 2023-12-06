@@ -1,12 +1,12 @@
 {
-  "name": "kaspacore-lib",
-  "main": "./kaspacore-lib.min.js",
+  "name": "karlsencore-lib",
+  "main": "./karlsencore-lib.min.js",
   "version": "0.0.1",
-  "homepage": "http://kaspacore.io",
-  "authors": ["kaspa"],
+  "homepage": "http://karlsencoin.com",
+  "authors": ["karlsen"],
   "description": "A pure, powerful core for your bitcoin project.",
   "moduleType": ["globals"],
-  "keywords": ["bitcoin", "kaspacore", "btc", "satoshi"],
+  "keywords": ["bitcoin", "karlsencore", "btc", "satoshi"],
   "license": "MIT",
   "ignore": [
     "**/.*",

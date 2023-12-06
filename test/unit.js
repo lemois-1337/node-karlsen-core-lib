@@ -3,9 +3,9 @@
 var should = require('chai').should();
 var expect = require('chai').expect;
 
-var kaspacore = require('..');
-var errors = kaspacore.errors;
-var Unit = kaspacore.Unit;
+var karlsencore = require('..');
+var errors = karlsencore.errors;
+var Unit = karlsencore.Unit;
 
 describe('Unit', function() {
 

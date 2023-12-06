@@ -3,13 +3,13 @@
 var should = require('chai').should();
 var expect = require('chai').expect;
 
-var kaspacore = require('..');
-var Point = kaspacore.crypto.Point;
-var BN = kaspacore.crypto.BN;
-var PublicKey = kaspacore.PublicKey;
-var PrivateKey = kaspacore.PrivateKey;
-var Address = kaspacore.Address;
-var Networks = kaspacore.Networks;
+var karlsencore = require('..');
+var Point = karlsencore.crypto.Point;
+var BN = karlsencore.crypto.BN;
+var PublicKey = karlsencore.PublicKey;
+var PrivateKey = karlsencore.PrivateKey;
+var Address = karlsencore.Address;
+var Networks = karlsencore.Networks;
 
 /* jshint maxlen: 200 */
 

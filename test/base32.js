@@ -2,8 +2,8 @@
 
 var expect = require('chai').expect;
 var should = require('chai').should();
-var kaspacore = require('..');
-var base32 = kaspacore.util.base32;
+var karlsencore = require('..');
+var base32 = karlsencore.util.base32;
 
 describe('base32', function() {
 

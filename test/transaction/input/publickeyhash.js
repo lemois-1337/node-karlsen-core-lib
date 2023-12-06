@@ -5,13 +5,13 @@ var should = require('chai').should();
 var expect = require('chai').expect;
 var _ = require('lodash');
 
-var kaspacore = require('../../..');
-var Transaction = kaspacore.Transaction;
-var PrivateKey = kaspacore.PrivateKey;
-var Address = kaspacore.Address;
-var Script = kaspacore.Script;
-var Networks = kaspacore.Networks;
-var Signature = kaspacore.crypto.Signature;
+var karlsencore = require('../../..');
+var Transaction = karlsencore.Transaction;
+var PrivateKey = karlsencore.PrivateKey;
+var Address = karlsencore.Address;
+var Script = karlsencore.Script;
+var Networks = karlsencore.Networks;
+var Signature = karlsencore.crypto.Signature;
 
 describe('PublicKeyHashInput', function() {
 
