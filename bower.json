@@ -2,7 +2,7 @@
   "name": "karlsencore-lib",
   "main": "./karlsencore-lib.min.js",
   "version": "0.0.1",
-  "homepage": "http://karlsencoin.com",
+  "homepage": "https://karlsencoin.com",
   "authors": ["karlsen"],
   "description": "A pure, powerful core for your bitcoin project.",
   "moduleType": ["globals"],
