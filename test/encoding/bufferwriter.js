@@ -1,10 +1,10 @@
 'use strict';
 
-var kaspacore = require('../..');
+var karlsencore = require('../..');
 var should = require('chai').should();
-var BufferWriter = kaspacore.encoding.BufferWriter;
-var BufferReader = kaspacore.encoding.BufferReader;
-var BN = kaspacore.crypto.BN;
+var BufferWriter = karlsencore.encoding.BufferWriter;
+var BufferReader = karlsencore.encoding.BufferReader;
+var BN = karlsencore.crypto.BN;
 
 describe('BufferWriter', function() {
 

@@ -1,6 +1,6 @@
 # Browser Builds
 
-Kaspacore and most official submodules work in the browser, thanks to [browserify](http://browserify.org/) (some modules are not fully compatible with web browsers).
+Karlsencore and most official submodules work in the browser, thanks to [browserify](http://browserify.org/) (some modules are not fully compatible with web browsers).
 
 The easiest and recommended way to use them, is via [Bower](http://bower.io/), a browser package manager, and get the release bundles. For example, when building an app that uses `bitcore` and `bitcore-mnemonic`, you do:
 
@@ -40,7 +40,7 @@ After this, you can include the bundled release versions in your HTML file:
 <body>
 
   <script type="text/javascript">
-    var kaspacore = require('bitcore-lib');
+    var karlsencore = require('bitcore-lib');
     var Mnemonic = require('bitcore-mnemonic');
     // etc...
   </script>

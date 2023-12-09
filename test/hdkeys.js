@@ -14,10 +14,10 @@ var _ = require('lodash');
 var should = require('chai').should();
 var expect = require('chai').expect;
 var sinon = require('sinon');
-var kaspacore = require('..');
-var Networks = kaspacore.Networks;
-var HDPrivateKey = kaspacore.HDPrivateKey;
-var HDPublicKey = kaspacore.HDPublicKey;
+var karlsencore = require('..');
+var Networks = karlsencore.Networks;
+var HDPrivateKey = karlsencore.HDPrivateKey;
+var HDPublicKey = karlsencore.HDPublicKey;
 
 describe('HDKeys building with static methods', function() {
   var classes = [HDPublicKey, HDPrivateKey];
@@ -279,9 +279,9 @@ describe('BIP32 compliance', function() {
       var invalid =  Buffer.from('0000000000000000000000000000000000000000000000000000000000000000', 'hex');
       var privateKeyBuffer =  Buffer.from('5f72914c48581fc7ddeb944a9616389200a9560177d24f458258e5b04527bcd1', 'hex');
       var chainCodeBuffer =  Buffer.from('39816057bba9d952fe87fe998b7fd4d690a1bb58c2ff69141469e4d1dffb4b91', 'hex');
-      var unstubbed = kaspacore.crypto.BN.prototype.toBuffer;
+      var unstubbed = karlsencore.crypto.BN.prototype.toBuffer;
       var count = 0;
-      var stub = sandbox.stub(kaspacore.crypto.BN.prototype, 'toBuffer').callsFake(function (args) {
+      var stub = sandbox.stub(karlsencore.crypto.BN.prototype, 'toBuffer').callsFake(function (args) {
         // On the fourth call to the function give back an invalid private key
         // otherwise use the normal behavior.
         count++;
@@ -291,7 +291,7 @@ describe('BIP32 compliance', function() {
         var ret = unstubbed.apply(this, arguments);
         return ret;
       });
-      sandbox.spy(kaspacore.PrivateKey, 'isValid');
+      sandbox.spy(karlsencore.PrivateKey, 'isValid');
       var key = HDPrivateKey.fromObject({
         network: 'testnet',
         depth: 0,
@@ -302,7 +302,7 @@ describe('BIP32 compliance', function() {
       });
       var derived = key.derive("m/44'");
       derived.privateKey.toString().should.equal('b15bce3608d607ee3a49069197732c656bca942ee59f3e29b4d56914c1de6825');
-      kaspacore.PrivateKey.isValid.callCount.should.equal(2);
+      karlsencore.PrivateKey.isValid.callCount.should.equal(2);
     });
     it('will handle edge case that a derive public key is invalid', function() {
       var hashBuffer = Buffer.from('029e58b241790284ef56502667b15157b3fc58c567f044ddc35653860f9455d099', 'hex');
@@ -315,9 +315,9 @@ describe('BIP32 compliance', function() {
         chainCode: chainCodeBuffer,
         publicKey: hashBuffer
       });
-      var unstubbed = kaspacore.PublicKey.fromPoint;
-      kaspacore.PublicKey.fromPoint = function() {
-        kaspacore.PublicKey.fromPoint = unstubbed;
+      var unstubbed = karlsencore.PublicKey.fromPoint;
+      karlsencore.PublicKey.fromPoint = function() {
+        karlsencore.PublicKey.fromPoint = unstubbed;
         throw new Error('Point cannot be equal to Infinity');
       };
       sandbox.spy(key, '_deriveWithNumber');

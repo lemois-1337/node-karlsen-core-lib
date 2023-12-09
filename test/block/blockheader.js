@@ -1,11 +1,11 @@
 'use strict';
 
-var kaspacore = require('../..');
+var karlsencore = require('../..');
 var BN = require('../../lib/crypto/bn');
-var BufferReader = kaspacore.encoding.BufferReader;
-var BufferWriter = kaspacore.encoding.BufferWriter;
+var BufferReader = karlsencore.encoding.BufferReader;
+var BufferWriter = karlsencore.encoding.BufferWriter;
 
-var BlockHeader = kaspacore.BlockHeader;
+var BlockHeader = karlsencore.BlockHeader;
 var fs = require('fs');
 var should = require('chai').should();
 

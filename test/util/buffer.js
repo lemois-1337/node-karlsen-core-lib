@@ -4,9 +4,9 @@
 var should = require('chai').should();
 var expect = require('chai').expect;
 
-var kaspacore = require('../..');
-var errors = kaspacore.errors;
-var BufferUtil = kaspacore.util.buffer;
+var karlsencore = require('../..');
+var errors = karlsencore.errors;
+var BufferUtil = karlsencore.util.buffer;
 
 describe('buffer utils', function() {
 

@@ -2,8 +2,8 @@
 
 var expect = require('chai').expect;
 var should = require('chai').should();
-var kaspacore = require('..');
-var networks = kaspacore.Networks;
+var karlsencore = require('..');
+var networks = karlsencore.Networks;
 
 describe('Networks', function() {
 

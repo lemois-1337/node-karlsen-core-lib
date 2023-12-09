@@ -1,11 +1,11 @@
 'use strict';
 
 var should = require('chai').should();
-var kaspacore = require('../..');
-var BN = kaspacore.crypto.BN;
-var BufferReader = kaspacore.encoding.BufferReader;
-var BufferWriter = kaspacore.encoding.BufferWriter;
-var Varint = kaspacore.encoding.Varint;
+var karlsencore = require('../..');
+var BN = karlsencore.crypto.BN;
+var BufferReader = karlsencore.encoding.BufferReader;
+var BufferWriter = karlsencore.encoding.BufferWriter;
+var Varint = karlsencore.encoding.Varint;
 
 describe('Varint', function() {
 

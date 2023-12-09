@@ -2,11 +2,11 @@
 
 var _ = require('lodash');
 var should = require('chai').should();
-var kaspacore = require('../..');
-var BN = kaspacore.crypto.BN;
-var Signature = kaspacore.crypto.Signature;
-var JSUtil = kaspacore.util.js;
-var Interpreter = kaspacore.Script.Interpreter;
+var karlsencore = require('../..');
+var BN = karlsencore.crypto.BN;
+var Signature = karlsencore.crypto.Signature;
+var JSUtil = karlsencore.util.js;
+var Interpreter = karlsencore.Script.Interpreter;
 
 var sig_canonical = require('../data/bitcoind/sig_canonical');
 var sig_noncanonical = require('../data/bitcoind/sig_noncanonical');

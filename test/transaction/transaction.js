@@ -7,18 +7,18 @@ var expect = require('chai').expect;
 var _ = require('lodash');
 var sinon = require('sinon');
 
-var kaspacore = require('../..');
-var BN = kaspacore.crypto.BN;
-var Transaction = kaspacore.Transaction;
-var Signature = kaspacore.Signature;
-var Input = kaspacore.Transaction.Input;
-var Output = kaspacore.Transaction.Output;
-var PrivateKey = kaspacore.PrivateKey;
-var Script = kaspacore.Script;
-var Address = kaspacore.Address;
-var Networks = kaspacore.Networks;
-var Opcode = kaspacore.Opcode;
-var errors = kaspacore.errors;
+var karlsencore = require('../..');
+var BN = karlsencore.crypto.BN;
+var Transaction = karlsencore.Transaction;
+var Signature = karlsencore.Signature;
+var Input = karlsencore.Transaction.Input;
+var Output = karlsencore.Transaction.Output;
+var PrivateKey = karlsencore.PrivateKey;
+var Script = karlsencore.Script;
+var Address = karlsencore.Address;
+var Networks = karlsencore.Networks;
+var Opcode = karlsencore.Opcode;
+var errors = karlsencore.errors;
 
 var transactionVector = require('../data/tx_creation');
 
@@ -122,7 +122,7 @@ describe('Transaction', function() {
   });
 
   it('fromObject with pay-to-public-key previous outputs', function() {
-    var tx = kaspacore.Transaction({
+    var tx = karlsencore.Transaction({
       hash: '132856bf03d6415562a556437d22ac63c37a4595fd986c796eb8e02dc031aa25',
       version: 1,
       inputs: [{
@@ -145,7 +145,7 @@ describe('Transaction', function() {
       }],
       nLockTime: 139
     });
-    tx.inputs[0].should.be.instanceof(kaspacore.Transaction.Input.PublicKey);
+    tx.inputs[0].should.be.instanceof(karlsencore.Transaction.Input.PublicKey);
     tx.inputs[0].output.satoshis.should.equal(5000000000);
     tx.inputs[0].output.script.toHex().should.equal('2103b1c65d65f1ff3fe145a4ede692460ae0606671d04e8449e99dd11c66ab55a7feac');
   });
@@ -833,7 +833,7 @@ describe('Transaction', function() {
         outputIndex: 0,
         script: new Script()
       }), outputScriptString, 10000);
-      transaction.inputs[0].output.script.should.be.instanceof(kaspacore.Script);
+      transaction.inputs[0].output.script.should.be.instanceof(karlsencore.Script);
       transaction.inputs[0].output.script.toString().should.equal(outputScriptString);
     });
   });

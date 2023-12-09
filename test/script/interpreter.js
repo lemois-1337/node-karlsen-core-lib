@@ -1,14 +1,14 @@
 'use strict';
 
 var should = require('chai').should();
-var kaspacore = require('../..');
-var Interpreter = kaspacore.Script.Interpreter;
-var Transaction = kaspacore.Transaction;
-var PrivateKey = kaspacore.PrivateKey;
-var Script = kaspacore.Script;
-var BN = kaspacore.crypto.BN;
-var BufferWriter = kaspacore.encoding.BufferWriter;
-var Opcode = kaspacore.Opcode;
+var karlsencore = require('../..');
+var Interpreter = karlsencore.Script.Interpreter;
+var Transaction = karlsencore.Transaction;
+var PrivateKey = karlsencore.PrivateKey;
+var Script = karlsencore.Script;
+var BN = karlsencore.crypto.BN;
+var BufferWriter = karlsencore.encoding.BufferWriter;
+var Opcode = karlsencore.Opcode;
 var _ = require('lodash');
 
 var script_tests = require('../data/bitcoind/script_tests');

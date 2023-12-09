@@ -4,8 +4,8 @@ var _ = require('lodash');
 var chai = require('chai');
 var should = chai.should();
 var expect = chai.expect;
-var kaspacore = require('..');
-var Opcode = kaspacore.Opcode;
+var karlsencore = require('..');
+var Opcode = karlsencore.Opcode;
 
 describe('Opcode', function() {
 

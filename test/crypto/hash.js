@@ -1,8 +1,8 @@
 'use strict';
 
 require('chai').should();
-var kaspacore = require('../..');
-var Hash = kaspacore.crypto.Hash;
+var karlsencore = require('../..');
+var Hash = karlsencore.crypto.Hash;
 
 describe('Hash', function() {
   var buf = Buffer.from([0, 1, 2, 3, 253, 254, 255]);

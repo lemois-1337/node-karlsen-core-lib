@@ -1,8 +1,8 @@
 'use strict';
 
 var should = require('chai').should();
-var kaspacore = require('../..');
-var BN = kaspacore.crypto.BN;
+var karlsencore = require('../..');
+var BN = karlsencore.crypto.BN;
 
 describe('BN', function() {
   it('should create a bn', function() {

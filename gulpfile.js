@@ -1,3 +1,3 @@
 
-var startGulp = require('kaspacore-build');
+var startGulp = require('karlsencore-build');
 Object.assign(exports, startGulp('lib'))

@@ -1,4 +1,4 @@
-# Kaspacore
+# Karlsencore
 
 ## Documentation Index
 
@@ -45,11 +45,11 @@ Some functionality is implemented as a module that can be installed separately:
 ### Create and Save a Private Key
 
 ```javascript
-var privateKey = new kaspacore.PrivateKey();
+var privateKey = new karlsencore.PrivateKey();
 
 var exported = privateKey.toWIF();
 // e.g. L3T1s1TYP9oyhHpXgkyLoJFGniEgkv2Jhi138d7R2yJ9F4QdDU2m
-var imported = kaspacore.PrivateKey.fromWIF(exported);
+var imported = karlsencore.PrivateKey.fromWIF(exported);
 var hexa = privateKey.toString();
 // e.g. 'b9de6e778fe92aa7edb69395556f843f1dce0448350112e14906efc2a80fa61a'
 ```
@@ -64,7 +64,7 @@ var address = privateKey.toAddress();
 
 ```javascript
 // Build a 2-of-3 address from public keys
-var p2shAddress = new kaspacore.Address([publicKey1, publicKey2, publicKey3], 2);
+var p2shAddress = new karlsencore.Address([publicKey1, publicKey2, publicKey3], 2);
 ```
 
 ### Request a Payment
@@ -74,7 +74,7 @@ var paymentInfo = {
   address: '1DNtTk4PUCGAdiNETAzQFWZiy2fCHtGnPx',
   amount: 120000 //satoshis
 };
-var uri = new kaspacore.URI(paymentInfo).toString();
+var uri = new karlsencore.URI(paymentInfo).toString();
 ```
 
 ### Create a Transaction

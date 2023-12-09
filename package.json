@@ -1,5 +1,5 @@
 {
-  "name": "@kaspa/core-lib",
+  "name": "@karlsen/core-lib",
   "version": "1.6.5",
   "main": "index.js",
   "authors": [
@@ -10,6 +10,10 @@
     {
       "name": "ASPECTRON Inc",
       "email": "info@aspectron.com"
+    },
+    {
+      "name": "Karlsen Developers",
+      "email": "lemois1337@protonmail.com"
     }
   ],
   "browser": {
@@ -26,7 +30,7 @@
     "lodash": "^4.17.20",
     "url": "*"
   },
-  "description": "JavaScript Kaspa library.",
+  "description": "JavaScript Karlsen library.",
   "___devDependencies": {
     "base-x": "=3.0.4",
     "bitcore-build": "^8.23.1",
@@ -39,7 +43,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aspectron/kaspacore-lib"
+    "url": "https://github.com/karlsen-network/node-karlsen-core-lib"
   },
   "scripts": {
     "xbuild": "gulp",

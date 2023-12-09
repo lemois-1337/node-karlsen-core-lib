@@ -2,10 +2,10 @@
 
 var should = require('chai').should();
 
-var kaspacore = require('../..');
-var errors = kaspacore.errors;
-var $ = kaspacore.util.preconditions;
-var PrivateKey = kaspacore.PrivateKey;
+var karlsencore = require('../..');
+var errors = karlsencore.errors;
+var $ = karlsencore.util.preconditions;
+var PrivateKey = karlsencore.PrivateKey;
 
 describe('preconditions', function() {
 
