@@ -11,7 +11,7 @@ interfacing with the Karlsen network.
 ## Get Started
 
 ```sh
-git clone https://github.com/karlsen-network/node-karlsen-core-lib.git
+git clone https://github.com/karlsen-network/node-karlsen-core-lib
 ```
 
 Adding Karlsencore to your app's `package.json`:
